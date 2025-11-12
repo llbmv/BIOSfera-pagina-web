@@ -1,0 +1,346 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+.main-header {
+    background-color: #2c3e50; 
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header img {
+    width: 15%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+.logo .logo-text {
+    font-size: 4em;
+    font-weight: 700;
+    color: white;
+    padding: 5px 10px;
+}
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: 1.3em;
+}
+.main-nav li {
+    margin-left: 20px;
+}
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+.main-nav a:hover {
+    color: #3498db; 
+}
+.main-content {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+.quienes-somos {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.quienes-somos p {
+    max-width: 800px;
+    margin: 15px auto;
+    font-size: 1.1em;
+}
+.servicios-ofertas {
+    padding: 30px 200px;
+}
+.tarjetas {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; 
+}
+.tarjeta {
+    flex-basis: calc(33.333% - 20px);
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #ddd; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.3s;
+}
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+}
+.tarjeta h3 {
+    color: #3498db;
+    font-size: 1.4em;
+    margin-top: 0;
+}
+.btn-oferta {
+    display: inline-block;
+    background-color: #e74c3c; 
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+.btn-oferta:hover {
+    background-color: #c0392b;
+}
+.main-footer {
+    background-color: #34495e;
+    color: white;
+    padding: 30px 5%;
+    margin-top: 40px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto 20px;
+}
+.contacto-info p, .redes-sociales {
+    margin: 10px 0;
+}
+.contacto-info i {
+    color: #3498db;
+    margin-right: 8px;
+}
+.redes-sociales a {
+    color: white;
+    margin-right: 15px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+.redes-sociales a:hover {
+    color: #30dbea; 
+}
+.copyright {
+    text-align: center;
+    font-size: 0.9em;
+    opacity: 0.8;
+    padding-top: 15px;
+    border-top: 1px solid #4a667f;
+}
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .main-nav li {
+        margin: 5px 0;
+    }
+    .tarjetas {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .tarjeta {
+        flex-basis: 100%;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .redes-sociales {
+        margin-top: 20px;
+    }
+}
+.main-content {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+.service-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1em;
+}
+.horarios-table {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.horarios-table thead th {
+    background-color: #3498db;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+.horarios-table td {
+    padding: 12px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+.horarios-table tbody tr:hover {
+    background-color: #dce7ee;
+}
+.formulario-section {
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.repair-form {
+    display: flex;
+    flex-direction: column;
+}
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-group label {
+    flex-basis: 120px;
+    text-align: right;
+    padding-right: 15px;
+    font-weight: 700;
+    color: #555;
+    padding-top: 8px;
+}
+.form-group input[type="text"],
+.form-group textarea {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    min-width: 0;
+}
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+.form-group.submit-group {
+    justify-content: center;
+    margin-top: 30px; 
+    margin-bottom: 0;
+}
+.btn-submit {
+    font-size: large;
+}
+.intro-reacondicionado {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    font-size: 1.1em;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.galeria-ofertas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.equipo-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.equipo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+.equipo-img {
+    width: 80%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    justify-content: center;
+}
+.equipo-detalle {
+    padding: 20px;
+}
+.equipo-detalle h2 {
+    color: #3498db;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.descripcion {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 15px;
+}
+.specs p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+.garantia {
+    color: #2ecc71;
+    font-weight: 700;
+}
+.precio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+}
+.precio-final {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #e74c3c;
+}
+.btn-comprar {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+.btn-comprar:hover {
+    background-color: #2980b9;
+}

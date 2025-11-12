@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOSfera</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <img src="../logoreto1.png" alt="logo empresa">
+        <div class="logo">
+            <span class="logo-text">BIOSfera</span>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="reacondicionado.html">Equipos Reacondicionados</a></li>
+                <li><a href="reparacion.html">Reparación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h1>Servicio de Reparación y Diagnóstico</h1>
+        <p class="service-intro">
+            Ofrecemos diagnósticos gratuitos y servicio técnico especializado para portátiles, PCs de escritorio y periféricos.
+            Consulta nuestros horarios disponibles para atención al cliente y solicita información sin compromiso.
+        </p>
+        <section class="horarios-section">
+            <h2>Horario de Recepción y Evaluación</h2>
+            <table class="horarios-table">
+                <thead>
+                    <tr>
+                        <th>Día</th>
+                        <th>Horario Mañana</th>
+                        <th>Horario Tarde</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>9:00 - 14:00</td>
+                        <td>16:00 - 19:30</td>
+                    </tr>
+                    <tr>
+                        <td>Martes</td>
+                        <td>9:00 - 14:00</td>
+                        <td>16:00 - 19:30</td>
+                    </tr>
+                    <tr>
+                        <td>Miércoles</td>
+                        <td>9:00 - 14:00</td>
+                        <td>16:00 - 19:30</td>
+                    </tr>
+                    <tr>
+                        <td>Jueves</td>
+                        <td>9:00 - 14:00</td>
+                        <td>16:00 - 19:30</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>9:00 - 13:00</td>
+                        <td>Cerrado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="formulario-section">
+            <h2>Solicitar diagnóstico o reparación</h2>
+            <form action="#" method="POST" class="repair-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>                
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" name="dni" required>
+                </div>
+                <div class="form-group radio-group">
+                    <label>Horario Preferido:</label>
+                    <div class="radio-options">
+                        <input type="radio" id="mañana" name="horario" value="mañana" required>
+                        <label for="manana">Mañana</label>
+                        <input type="radio" id="tarde" name="horario" value="tarde">
+                        <label for="tarde">Tarde</label>
+                    </div>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label>Días Disponibles:</label>
+                    <div class="checkbox-options">
+                        <input type="checkbox" id="lunes" name="dia" value="lunes">
+                        <label for="lunes">Lunes</label>
+                        <input type="checkbox" id="martes" name="dia" value="martes">
+                        <label for="martes">Martes</label>
+                        <input type="checkbox" id="miercoles" name="dia" value="miercoles">
+                        <label for="miercoles">Miércoles</label>
+                        <input type="checkbox" id="jueves" name="dia" value="jueves">
+                        <label for="jueves">Jueves</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción del problema y del dispositivo:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+                </div>
+                <div class="form-group submit-group">
+                    <button type="submit" class="btn-submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer id="contacto" class="main-footer">
+        <div class="footer-content">
+            <div class="contacto-info">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección: C/ Innovación, 42, 28001 Madrid</p>
+                <p><i class="fas fa-phone"></i> Teléfono: +34 123 456 789</p>
+                <p><i class="fas fa-envelope"></i> Email: info@biosfera.com</p>
+            </div>
+            <div class="redes-sociales">
+                <h3>Síguenos</h3>
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram">Instagram</i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter">X (Twitter)</i></a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 BIOSfera. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
