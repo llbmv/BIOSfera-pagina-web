@@ -17,7 +17,7 @@ body {
 }
 header img {
     width: 15%;
-    height: 150px;
+    height: 160px;
     object-fit: cover;
     display: block;
     border-radius: 10px;
@@ -343,4 +343,5 @@ h1, h2 {
 }
 .btn-comprar:hover {
     background-color: #2980b9;
+
 }
