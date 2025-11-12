@@ -17,7 +17,7 @@ body {
 }
 header img {
     width: 15%;
-    height: 200px;
+    height: 165px;
     object-fit: cover;
     display: block;
     border-radius: 10px;
@@ -345,4 +345,5 @@ h1, h2 {
     background-color: #2980b9;
 
 }
+
 
