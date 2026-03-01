@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+        .contenedor {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .opciones img {
+            width: 100px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin: 10px;
+        }
+        .opciones img:hover { transform: scale(1.1); }
+        #resultado-texto { font-weight: bold; color: #333; margin-top: 20px; }
+        .pantalla-juego { display: flex; justify-content: space-around; margin-top: 15px; }
+        .icono-vs { width: 80px; height: 80px; border: 2px solid #ddd; border-radius: 10px; padding: 5px;}
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Piedra, Papel o Tijera</h1>
+        <p>Elige tu movimiento:</p>
+        
+        <div class="opciones">
+            <img src="https://img.icons8.com/color/96/rock.png" onclick="jugar('piedra')" alt="Piedra">
+            <img src="https://img.icons8.com/color/96/paper.png" onclick="jugar('papel')" alt="Papel">
+            <img src="https://img.icons8.com/color/96/scissors.png" onclick="jugar('tijera')" alt="Tijera">
+        </div>
+
+        <div class="pantalla-juego">
+            <div><p>Tú</p><img id="img-usuario" class="icono-vs" src="pictograma-x_764382-13928.avif"></div>
+            <div><p>VS</p></div>
+            <div><p>PC</p><img id="img-pc" class="icono-vs" src="pictograma-x_764382-13928.avif"></div>
+        </div>
+
+        <h2 id="resultado-texto">¡Mucha suerte!</h2>
+    </div>
+
+    <script>
+        
+        const imagenes = {
+            'piedra': 'https://img.icons8.com/color/96/rock.png',
+            'papel': 'https://img.icons8.com/color/96/paper.png',
+            'tijera': 'https://img.icons8.com/color/96/scissors.png'
+        };
+
+        const jugar = (eleccionUsuario) => {
+            const opciones = ['piedra', 'papel', 'tijera'];
+            const eleccionPC = opciones[Math.floor(Math.random() * 3)];
+
+            
+            document.getElementById("img-usuario").setAttribute("src", imagenes[eleccionUsuario]);
+            document.getElementById("img-pc").setAttribute("src", imagenes[eleccionPC]);
+
+            let mensaje = "";
+
+            
+            if (eleccionUsuario === eleccionPC) {
+                mensaje = "¡Empate!";
+            } else if (
+                (eleccionUsuario === 'piedra' && eleccionPC === 'tijera') ||
+                (eleccionUsuario === 'papel' && eleccionPC === 'piedra') ||
+                (eleccionUsuario === 'tijera' && eleccionPC === 'papel')
+            ) {
+                mensaje = "¡Ganaste!";
+            } else {
+                mensaje = "Perdiste...";
+            }
+
+            document.getElementById("resultado-texto").innerText = mensaje;
+        };
+    </script>
+</body>
+</html>
