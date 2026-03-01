@@ -3,38 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIOSfera</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>BIOSfera - Reacondicionados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .main-header {
+            background-color: #2c3e50; 
+            color: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            width: 15%;
+            height: 165px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+        .logo .logo-text {
+            font-size: 4em;
+            font-weight: 700;
+            color: white;
+            padding: 5px 10px;
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            font-size: 1.3em;
+        }
+        .main-nav li {
+            margin-left: 20px;
+        }
+        .main-nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+        .main-nav a:hover {
+            color: #3498db; 
+        }
+        .main-content {
+            padding: 40px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+
+        }
+        
+        .galeria-ofertas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .equipo-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column; 
+            height: 100%; 
+        }
+
+        .equipo-img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain; 
+            background-color: #fff;
+        }
+
+        .equipo-detalle {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; 
+        }
+
+        .equipo-detalle h2 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .descripcion {
+            font-size: 0.9rem;
+            color: #555;
+            flex-grow: 1; 
+        }
+
+        .specs {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 0.85rem;
+        }
+
+        .precio {
+            text-align: center; 
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .precio-final {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .btn-comprar {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn-comprar:hover {
+            background-color: #219150;
+        }
+    </style>
 </head>
 <body>
+
     <header class="main-header">
-        <img src="../logoreto1.png" alt="logo empresa">
+        <img src="LOGO EMPRESA.png" alt="logo empresa">
         <div class="logo">
             <span class="logo-text">BIOSfera</span>
         </div>
         <nav class="main-nav">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="inicio.html">Inicio</a></li>
                 <li><a href="reacondicionado.html">Equipos Reacondicionados</a></li>
                 <li><a href="reparacion.html">Reparación</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <main id="reacondicionados" class="main-content">
-        <h1 class="reacondicionado-title">Equipos Reacondicionados Certificados</h1>
-        <section class="intro-reacondicionado">
-            <p>Descubre nuestra selección de equipos informáticos reacondicionados. Cada unidad ha pasado por un riguroso proceso de inspección, limpieza y sustitución de componentes defectuosos. Te ofrecemos una alternativa sostenible y de alto rendimiento a un precio inmejorable, con garantía extendida para tu tranquilidad. ¡Tecnología de calidad a tu alcance!</p>
-        </section>
+
+    <main id="reacondicionados">
+        <h1 style="text-align: center; margin-top: 20px;">Equipos Reacondicionados Certificados</h1>
+        
         <section class="galeria-ofertas">
+            
             <div class="equipo-card">
-                <img src="../portatil.png" alt="Portátil reacondicionado de alto rendimiento" class="equipo-img">
+                <img src="portatil.png" alt="Portátil" class="equipo-img">
                 <div class="equipo-detalle">
                     <h2>Lenovo IdeaPad Slim 3</h2>
                     <p class="descripcion">Ideal para el teletrabajo, estudiantes y uso diario. Ligero y potente.</p>
                     <div class="specs">
-                        <p><strong>Garantía:</strong> <span class="garantia">2 Años</span></p>
-                        <p><strong>Especificaciones:</strong> Intel Core i7-13620H, 16GB RAM, 1TB SSD</p>
+                        <p><strong>Garantía:</strong> 2 Años</p>
+                        <p><strong>Specs:</strong> i7-13620H, 16GB RAM, 1TB SSD</p>
                     </div>
                     <div class="precio">
                         <span class="precio-final">599€</span>
@@ -42,14 +176,15 @@
                     </div>
                 </div>
             </div>
+
             <div class="equipo-card">
-                <img src="../pc.png" alt="PC de escritorio reacondicionado" class="equipo-img">
+                <img src="pc.png" alt="PC" class="equipo-img">
                 <div class="equipo-detalle">
                     <h2>PC Sobremesa "OmniDesk"</h2>
                     <p class="descripcion">Fiabilidad máxima para navegación y tareas de oficina básicas.</p>
                     <div class="specs">
-                        <p><strong>Garantía:</strong> <span class="garantia">1 Año</span></p>
-                        <p><strong>Especificaciones:</strong> AMD Ryzen 5 8500F, 16GB RAM, 1TB SSD</p>
+                        <p><strong>Garantía:</strong> 1 Año</p>
+                        <p><strong>Specs:</strong> Ryzen 5 8500F, 16GB RAM, 1TB SSD</p>
                     </div>
                     <div class="precio">
                         <span class="precio-final">649€</span>
@@ -57,14 +192,15 @@
                     </div>
                 </div>
             </div>
+
             <div class="equipo-card">
-                <img src="../monitor.jpg" alt="Monitor reacondicionado de 27 pulgadas" class="equipo-img">
+                <img src="monitor.jpg" alt="Monitor" class="equipo-img">
                 <div class="equipo-detalle">
                     <h2>Lenovo 27" LED</h2>
-                    <p class="descripcion">Monitor de alta resolución ideal para diseño gráfico o multitarea. Calibración de color perfecta.</p>
+                    <p class="descripcion">Monitor de alta resolución ideal para diseño gráfico o multitarea.</p>
                     <div class="specs">
-                        <p><strong>Garantía:</strong> <span class="garantia">1 Año</span></p>
-                        <p><strong>Especificaciones:</strong> 27 Pulgadas, Full HD 1080p, IPS, 100Hz</p>
+                        <p><strong>Garantía:</strong> 1 Año</p>
+                        <p><strong>Specs:</strong> 27", Full HD IPS, 100Hz</p>
                     </div>
                     <div class="precio">
                         <span class="precio-final">115€</span>
@@ -72,14 +208,15 @@
                     </div>
                 </div>
             </div>
+
             <div class="equipo-card">
-                <img src="../ultrabook.png" alt="Ultrabook reacondicionado" class="equipo-img">
+                <img src="ultrabook.png" alt="Ultrabook" class="equipo-img">
                 <div class="equipo-detalle">
                     <h2>IdeaPad 5</h2>
-                    <p class="descripcion">Máxima portabilidad y duración de batería para profesionales en constante movimiento.</p>
+                    <p class="descripcion">Máxima portabilidad y duración de batería para profesionales.</p>
                     <div class="specs">
-                        <p><strong>Garantía:</strong> <span class="garantia">2 Años</span></p>
-                        <p><strong>Especificaciones:</strong> AMD Ryzen™ AI 7 350, 16GB RAM, 1TB SSD SSD</p>
+                        <p><strong>Garantía:</strong> 2 Años</p>
+                        <p><strong>Specs:</strong> Ryzen AI 7, 16GB RAM, 1TB SSD</p>
                     </div>
                     <div class="precio">
                         <span class="precio-final">799€</span>
@@ -87,14 +224,15 @@
                     </div>
                 </div>
             </div>
+
             <div class="equipo-card">
-                <img src="../pc2.png" alt="PC reacondicionado" class="equipo-img">
+                <img src="pc2.png" alt="PC" class="equipo-img">
                 <div class="equipo-detalle">
                     <h2>PcCom Work</h2>
-                    <p class="descripcion">Excelente relación calidad/precio para este PC con componentes de primeras marcas, la máxima garantía y gran rendimiento, ideal para usuarios que buscan hacer "de todo un poco".</p>
+                    <p class="descripcion">Excelente relación calidad/precio. Ideal para tareas multitarea exigentes.</p>
                     <div class="specs">
-                        <p><strong>Garantía:</strong> <span class="garantia">3 Años</span></p>
-                        <p><strong>Especificaciones:</strong> Excelente relación calidad/precio para este PC con componentes de primeras marcas, la máxima garantía y gran rendimiento, ideal para usuarios que buscan hacer "de todo un poco".</p>
+                        <p><strong>Garantía:</strong> 3 Años</p>
+                        <p><strong>Specs:</strong> Componentes de primeras marcas.</p>
                     </div>
                     <div class="precio">
                         <span class="precio-final">449€</span>
@@ -102,14 +240,15 @@
                     </div>
                 </div>
             </div>
+
             <div class="equipo-card">
-                <img src="../monitor2.png" alt="Monitor reacondicionado" class="equipo-img">
+                <img src="monitor2.png" alt="Monitor" class="equipo-img">
                 <div class="equipo-detalle">
                     <h2>Monitor - Xiaomi A24i</h2>
-                    <p class="descripcion">El monitor Xiaomi A24i es ideal para realizar todo tipo de tareas ofimáticas y de trabajo que necesitas en tu día a día </p>
+                    <p class="descripcion">Ideal para realizar todo tipo de tareas ofimáticas en tu día a día.</p>
                     <div class="specs">
-                        <p><strong>Garantía:</strong> <span class="garantia">1 Años</span></p>
-                        <p><strong>Especificaciones:</strong> 27 Pulgadas, Full HD 1080p, IPS, 100Hz</p>
+                        <p><strong>Garantía:</strong> 1 Año</p>
+                        <p><strong>Specs:</strong> 24", Full HD, IPS, 100Hz</p>
                     </div>
                     <div class="precio">
                         <span class="precio-final">79€</span>
@@ -117,6 +256,7 @@
                     </div>
                 </div>
             </div>
+
         </section>
     </main>
     <footer id="contacto" class="main-footer">
@@ -129,13 +269,11 @@
             </div>
             <div class="redes-sociales">
                 <h3>Síguenos</h3>
-                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" target="_blank"><i class="fab fa-instagram">Instagram</i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter">X (Twitter)</i></a>
+                <a href="java.html" target="_blank"><i class="fab fa-twitter"><strong>JUEGO🎮</strong></i></a>
             </div>
         </div>
         <p class="copyright">&copy; 2025 BIOSfera. Todos los derechos reservados.</p>
     </footer>
 </body>
-
 </html>
