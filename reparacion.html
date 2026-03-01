@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIOSfera</title>
+    <title>BIOSfera - Servicio Técnico</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="main-header">
-        <img src="../logoreto1.png" alt="logo empresa">
+        <img src="LOGO EMPRESA.png" alt="logo empresa">
         <div class="logo">
             <span class="logo-text">BIOSfera</span>
         </div>
         <nav class="main-nav">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="inicio.html">Inicio</a></li>
                 <li><a href="reacondicionado.html">Equipos Reacondicionados</a></li>
                 <li><a href="reparacion.html">Reparación</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
+
     <main class="main-content">
         <h1>Servicio de Reparación y Diagnóstico</h1>
         <p class="service-intro">
-            Ofrecemos diagnósticos gratuitos y servicio técnico especializado para portátiles, PCs de escritorio y periféricos.
-            Consulta nuestros horarios disponibles para atención al cliente y solicita información sin compromiso.
+            Ofrecemos diagnósticos gratuitos y servicio técnico especializado. 
+            Consulta nuestros horarios y solicita tu cita a continuación.
         </p>
+
         <section class="horarios-section">
             <h2>Horario de Recepción y Evaluación</h2>
             <table class="horarios-table">
@@ -39,22 +41,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Lunes</td>
-                        <td>9:00 - 14:00</td>
-                        <td>16:00 - 19:30</td>
-                    </tr>
-                    <tr>
-                        <td>Martes</td>
-                        <td>9:00 - 14:00</td>
-                        <td>16:00 - 19:30</td>
-                    </tr>
-                    <tr>
-                        <td>Miércoles</td>
-                        <td>9:00 - 14:00</td>
-                        <td>16:00 - 19:30</td>
-                    </tr>
-                    <tr>
-                        <td>Jueves</td>
+                        <td>Lunes - Jueves</td>
                         <td>9:00 - 14:00</td>
                         <td>16:00 - 19:30</td>
                     </tr>
@@ -66,49 +53,68 @@
                 </tbody>
             </table>
         </section>
+
         <section class="formulario-section">
             <h2>Solicitar diagnóstico o reparación</h2>
-            <form action="#" method="POST" class="repair-form">
+            <form action="procesar.php" method="post">
+                
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
                 </div>                
+                
                 <div class="form-group">
                     <label for="apellido">Apellido:</label>
                     <input type="text" id="apellido" name="apellido" required>
                 </div>
-                <div class="form-group">
-                    <label for="dni">DNI:</label>
-                    <input type="text" id="dni" name="dni" required>
-                </div>
+
                 <div class="form-group radio-group">
-                    <label>Horario Preferido:</label>
+                    <label>Tipo de Mensaje:</label>
                     <div class="radio-options">
-                        <input type="radio" id="mañana" name="horario" value="mañana" required>
-                        <label for="manana">Mañana</label>
-                        <input type="radio" id="tarde" name="horario" value="tarde">
-                        <label for="tarde">Tarde</label>
+                        <input type="radio" id="sugerencia" name="tipo" value="Sugerencia" onclick="gestionarVista(false)">
+                        <label for="sugerencia">Sugerencia</label>
+                        
+                        <input type="radio" id="opinion" name="tipo" value="Opinion" onclick="gestionarVista(false)">
+                        <label for="opinion">Opinión</label>
+                        
+                        <input type="radio" id="cita" name="tipo" value="Cita" checked onclick="gestionarVista(true)">
+                        <label for="cita">Cita / Diagnóstico</label>
                     </div>
                 </div>
-                <div class="form-group checkbox-group">
-                    <label>Días Disponibles:</label>
-                    <div class="checkbox-options">
-                        <input type="checkbox" id="lunes" name="dia" value="lunes">
-                        <label for="lunes">Lunes</label>
-                        <input type="checkbox" id="martes" name="dia" value="martes">
-                        <label for="martes">Martes</label>
-                        <input type="checkbox" id="miercoles" name="dia" value="miercoles">
-                        <label for="miercoles">Miércoles</label>
-                        <input type="checkbox" id="jueves" name="dia" value="jueves">
-                        <label for="jueves">Jueves</label>
+
+                <div id="seccion-cita-dinamica">
+                    <div class="form-group radio-group">
+                        <label>Horario Preferido:</label>
+                        <div class="radio-options">
+                            <input type="radio" id="manana" name="horario" value="mañana">
+                            <label for="manana">Mañana</label>
+                            <input type="radio" id="tarde" name="horario" value="tarde">
+                            <label for="tarde">Tarde</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>Días Disponibles:</label>
+                        <div class="checkbox-options">
+                            <input type="checkbox" id="lunes" name="dia[]" value="lunes">
+                            <label for="lunes">Lunes</label>
+                            <input type="checkbox" id="martes" name="dia[]" value="martes">
+                            <label for="martes">Martes</label>
+                            <input type="checkbox" id="miercoles" name="dia[]" value="miercoles">
+                            <label for="miercoles">Miércoles</label>
+                            <input type="checkbox" id="jueves" name="dia[]" value="jueves">
+                            <label for="jueves">Jueves</label>
+                        </div>
                     </div>
                 </div>
+
                 <div class="form-group">
-                    <label for="descripcion">Descripción del problema y del dispositivo:</label>
-                    <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+                    <label for="mensaje">Descripción del problema o mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
                 </div>
+
                 <div class="form-group submit-group">
-                    <button type="submit" class="btn-submit">Enviar</button>
+                    <button type="submit" class="btn-submit">Enviar Formulario</button>
                 </div>
             </form>
         </section>
@@ -123,13 +129,19 @@
             </div>
             <div class="redes-sociales">
                 <h3>Síguenos</h3>
-                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" target="_blank"><i class="fab fa-instagram">Instagram</i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter">X (Twitter)</i></a>
+                <a href="java.html" target="_blank"><i class="fab fa-twitter"><strong>JUEGO🎮</strong></i></a>
             </div>
         </div>
         <p class="copyright">&copy; 2025 BIOSfera. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        function gestionarVista(mostrar) {
+            const seccion = document.getElementById('seccion-cita-dinamica');
+            seccion.style.display = mostrar ? 'block' : 'none';
+        }
+        window.onload = () => gestionarVista(true);
+    </script>
 </body>
-
 </html>
+
