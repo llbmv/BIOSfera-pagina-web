@@ -17,7 +17,7 @@ body {
 }
 header img {
     width: 15%;
-    height: 150px;
+    height: 165px;
     object-fit: cover;
     display: block;
     border-radius: 10px;
@@ -72,13 +72,16 @@ h2 {
     font-size: 1.1em;
 }
 .servicios-ofertas {
-    padding: 30px 200px;
+    padding: 50px 20px;
+    text-align: center;
 }
 .tarjetas {
     display: flex;
     justify-content: space-between;
     gap: 30px;
     flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .tarjeta {
     flex-basis: calc(33.333% - 20px);
@@ -89,6 +92,8 @@ h2 {
     border: 1px solid #ddd; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
     transition: transform 0.3s;
+    min-width: 300px;
+    max-width: 450px;
 }
 .tarjeta:hover {
     transform: translateY(-5px);
@@ -98,6 +103,10 @@ h2 {
     color: #3498db;
     font-size: 1.4em;
     margin-top: 0;
+    margin-bottom: 10px;
+}
+.tarjeta p {
+    line-height: 1.6;
 }
 .btn-oferta {
     display: inline-block;
@@ -131,7 +140,8 @@ h2 {
 }
 .contacto-info i {
     color: #3498db;
-    margin-right: 8px;
+    margin-right: 10px;
+    width: 20px;
 }
 .redes-sociales a {
     color: white;
@@ -255,14 +265,36 @@ h1, h2 {
     border-color: #3498db;
     outline: none;
 }
+textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
 .form-group.submit-group {
     justify-content: center;
     margin-top: 30px; 
     margin-bottom: 0;
 }
 .btn-submit {
-    font-size: large;
+    padding: 10px 25px; 
+    font-size: 16px;    
+    width: auto;
+    min-width: 120px;   
+    background-color: #28a745; 
+    color: white;             
+    border: none;              
+    border-radius: 5px;
+    cursor: pointer;           
+    transition: background 0.3s; 
 }
+
+
+.btn-submit:hover {
+    background-color: #218838; 
+}
+
+
+
 .intro-reacondicionado {
     text-align: center;
     max-width: 900px;
@@ -275,15 +307,18 @@ h1, h2 {
 }
 .galeria-ofertas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px;
 }
 .equipo-card {
     background-color: white;
+    border: 1px solid;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    display: flex;
 }
 .equipo-card:hover {
     transform: translateY(-5px);
@@ -292,12 +327,16 @@ h1, h2 {
 .equipo-img {
     width: 80%;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     justify-content: center;
+    padding: 15px;
 }
 .equipo-detalle {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 .equipo-detalle h2 {
     color: #3498db;
@@ -307,13 +346,20 @@ h1, h2 {
     text-align: left;
 }
 .descripcion {
-    font-size: 0.95em;
+    font-size: 0.9rem;
+    height: 60px;
+    overflow: hidden;
     color: #555;
     margin-bottom: 15px;
 }
 .specs p {
     margin: 5px 0;
     font-size: 0.9em;
+}
+.specs {
+    flex-grow: 1;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
 }
 .garantia {
     color: #2ecc71;
@@ -325,11 +371,11 @@ h1, h2 {
     align-items: center;
     padding-top: 15px;
     border-top: 1px solid #eee;
-    margin-top: 15px;
+    padding-top: 15px;
 }
 .precio-final {
-    font-size: 1.8em;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #e74c3c;
 }
 .btn-comprar {
@@ -344,3 +390,7 @@ h1, h2 {
 .btn-comprar:hover {
     background-color: #2980b9;
 }
+.btn-comprar:hover {
+    background-color: #2980b9;
+}
+
